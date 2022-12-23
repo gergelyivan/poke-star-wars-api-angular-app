@@ -1,0 +1,10 @@
+.container {
+	width: 100%;
+}
+.main {
+	padding: 20px;
+	position: relative;
+}
+.hidden {
+	display: none;
+}

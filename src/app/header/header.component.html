@@ -1,0 +1,11 @@
+<div class="topnav">
+	<a *ngFor="let search of localSearches; let i = index" (click)="loadLastSearch(search)">
+		Search<span *ngIf="search.search">('{{search.search}}')</span> {{i+1}}
+	</a>
+	<div class="search-container">
+		<form>
+			<input type="text" placeholder="Search.." name="search" [ngModel]="searchText" (ngModelChange)="searchTextChanged($event)">
+			<button (click)="search()" ><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>

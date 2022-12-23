@@ -1,0 +1,32 @@
+.list-container {
+	width: 100%;
+	border: 1px solid lightgray;
+	padding: 40px;
+	margin-bottom: 50px;
+	font-size: 16px;
+	position: relative;
+}
+ul {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+}
+li {
+	margin: 50px 0;
+	width: 100%;
+	word-wrap: break-word;
+}
+span.link {
+	margin-left: 20px;
+	text-decoration: underline;
+	color: blue;
+}
+span.link:hover {
+	font-weight: bold;
+	cursor: pointer;
+}
+.buttons {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}

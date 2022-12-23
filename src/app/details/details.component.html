@@ -1,0 +1,6 @@
+<ul *ngIf="item">
+	<li *ngFor="let i of item | keyvalue">
+		<p>{{ i.key }}: {{ i.value }}</p>
+	</li>
+</ul>
+<button (click)="back()">BACK</button>

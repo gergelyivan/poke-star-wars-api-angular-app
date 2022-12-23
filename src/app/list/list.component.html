@@ -1,0 +1,16 @@
+<div class="list-container" *ngIf="(listItemsEmitter$ | async) as list">
+	<ul>
+		<li *ngFor="let item of listItemsEmitter$ | async">
+			<span *ngFor="let key of currentMenuItem.keys; let i = index">
+				<span>{{ getInformation(item, key) }}</span>
+				<span *ngIf="i < currentMenuItem.keys.length-1"> / </span>
+			</span>
+			<span class="link" (click)="detailsClicked(item)">More details</span>
+		</li>
+	</ul>
+	<div class="buttons">
+		<button *ngIf="api.prev" (click)="getMoreData('prev')">PREVIOUS</button>
+		<button *ngIf="api.next" (click)="getMoreData('next')">NEXT</button>
+	</div>
+</div>
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>

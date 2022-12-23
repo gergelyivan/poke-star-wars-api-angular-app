@@ -1,0 +1,10 @@
+<div class="container">
+	<div [ngClass]="{'hidden': detailsItem}" class="header">
+		<app-header></app-header>
+	</div>
+	<div class="main">
+		<app-menu></app-menu>
+		<app-list [ngClass]="{'hidden': detailsItem}" (detailsOnEvent)="detailsOn($event)"></app-list>
+		<app-details [ngClass]="{'hidden': !detailsItem}" [item]="detailsItem" (detailsOffEvent)="detailsOff()"></app-details>
+	</div>
+</div>

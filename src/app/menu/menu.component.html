@@ -1,0 +1,7 @@
+<ul>
+	<li *ngFor="let menuItem of menuItems">
+		<span (click)="getListClicked(menuItem)" title="{{menuItem.name}}" [ngClass]="{ 'current': menuItem.value === state }">
+			{{ menuItem.name }}
+		</span>
+	</li>
+</ul>
